@@ -1,0 +1,20 @@
+
+
+# Â∞ádata frame‰∏≠Ê?Ä??â]factorËΩâÊ?êcharacter ----------------------------------------
+
+
+fac2chr <- function(df){
+    # Ëø¥Â?àÈ?çÊ≠∑ÊØèÂÄãÁõ¥Ë°?
+    for (c in 1:ncol(df)) {
+      cat('column',c, '\n')
+      # ?à§?ñ∑Ë©≤Ë?åclass?òØ‰∏çÊòØfactorÔºåÂ?ÇÊ?úÊòØÔºåÊîπ??êcharacter
+      if (class(df[,c]) == 'factor'){
+        df[,c]=as.character(df[,c])
+      }
+    }
+    print('end')
+    return(df)
+}
+
+
+
